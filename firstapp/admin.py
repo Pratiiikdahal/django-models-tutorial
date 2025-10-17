@@ -1,5 +1,7 @@
 from django.contrib import admin
 from firstapp.models import employee
 # Register your models here.
-
-admin.site.register(employee)
+class employeeAdmin(admin.ModelAdmin):
+    list_display=['id','eno','ename','esal','eaddr']
+    
+admin.site.register(employee,employeeAdmin)

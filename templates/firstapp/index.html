@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>Hello, welcome ! {{name}}</h1>
-    <h2> and i am {{age}} years old </h2>
+    <h2> and i am {{age}} years old </h2> 
+    {{emp_data}}
+    {%if emp_data%}
+        {%for emp in emp_data%}
+            {{emp.ename}} {{emp.eno}} {{emp.esal}}<br>
+        {%endfor%}
+    {%else%}
+        <h2>No data was found </h2>
+    {%endif%}
 </body>
 </html>
